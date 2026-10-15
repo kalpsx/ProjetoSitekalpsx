@@ -1,0 +1,182 @@
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background:
+        radial-gradient(ellipse at top, var(--glow-top) 0%, transparent 55%),
+        radial-gradient(ellipse at 20% 100%, var(--glow-left) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 100%, var(--glow-right) 0%, transparent 50%),
+        linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #EAF4FB;
+    padding: 40px 20px 100px;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+body::before {
+    background: radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.55) 100%);
+    z-index: 0;
+}
+body::after {
+    background: var(--bg-image, url('img/original_back.png')) center / cover;
+    opacity: var(--bg-opacity, 0.18);
+    z-index: -1;
+}
+.topbar {
+    display: center;
+    align-items: flex-start;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto 20px;
+    position: fixed; top: 24px; left: 24px; 
+  }
+ .back {
+    text-decoration: none;
+    color: #EAF4FB;
+    font-size: 0.95rem;
+    font-weight: 600;
+    opacity: 0.85;
+    
+  }
+ 
+  .dots { display: flex; gap: 6px; opacity: 0.5; }
+  .dots span {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #EAF4FB;
+  }
+.wiki-layout {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.page-title { font-size: 2rem; margin-bottom: 20px; }
+
+
+.tabs { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+
+.tab {
+    text-decoration: none;
+    color: #EAF4FB;
+    background: rgba(234, 244, 251, 0.06);
+    border: 1px solid rgba(234, 244, 251, 0.15);
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+.tab:hover { background: rgba(234, 244, 251, 0.12); }
+.tab.active {
+    background: var(--accent);
+    color: var(--accent-text);
+    border-color: var(--accent-border);
+}
+
+.warning-box {
+    border: 1px dashed var(--warn);
+    color: var(--text-soft);
+    background: rgba(0, 0, 0, 0.18);
+    padding: 14px 18px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    margin-bottom: 34px;
+}
+
+section { margin-bottom: 44px; scroll-margin-top: 20px; }
+
+.wiki-main h2 {
+    font-size: 1.2rem;
+    color: var(--text-soft);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(234, 244, 251, 0.15);
+}
+
+.wiki-main p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: var(--text-soft);
+    text-align: justify;
+}
+
+.wiki-main p a {
+    color: var(--accent-link);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+.wiki-main p a:hover { border-bottom-color: var(--accent-link); }
+
+
+.infobox {
+    position: sticky;
+    top: 30px;
+    background: rgba(234, 244, 251, 0.05);
+    border: 1px solid rgba(234, 244, 251, 0.15);
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.infobox-title {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(234, 244, 251, 0.15);
+}
+
+.infobox-img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: linear-gradient(160deg, var(--img-from) 0%, var(--img-to) 100%);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+    margin-bottom: 14px;
+}
+
+.infobox-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 0.78rem;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(234, 244, 251, 0.08);
+    color: #D8CBD2;
+}
+.infobox-row .label { font-weight: 700; color: #EAF4FB; flex-shrink: 0; }
+.infobox-row span:last-child { text-align: right; }
+
+.swatch {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-top: 14px;
+    border-radius: 4px;
+    background: var(--swatch);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 750px) {
+    .wiki-layout { grid-template-columns: 1fr; }
+    .infobox { position: static; order: -1; }
+}

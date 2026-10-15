@@ -1,0 +1,155 @@
+
+:root {
+    --hub-bg-top: #1b2a4e;
+    --hub-bg-bottom: #140f1f;
+    --hub-glow: rgba(110, 150, 255, 0.35);
+    --hub-accent: #9dc0ff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #EAF4FB;
+    padding: 24px 20px 80px;
+    background:
+        radial-gradient(ellipse at top, var(--hub-glow) 0%, transparent 60%),
+        linear-gradient(180deg, var(--hub-bg-top) 0%, var(--hub-bg-bottom) 100%);
+    background-attachment: fixed;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: var(--hub-bg-image, url('img/index_back.png')) center / cover;
+    opacity: 0.18;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.topbar { margin-bottom: 16px; }
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #EAF4FB;
+    background: rgba(234, 244, 251, 0.06);
+    border: 1px solid rgba(234, 244, 251, 0.15);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+.back-btn:hover { background: rgba(234, 244, 251, 0.14); }
+
+.hub-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0 50px;
+}
+
+/* ===== Cartas ===== */
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.card {
+    --offset: 0px;               /* cada carta define o seu deslocamento */
+    position: relative;
+    display: block;
+    width: 170px;
+    height: 400px;
+    margin-top: var(--offset);
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(160deg, #2a3560 0%, #120f24 100%);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover,
+.card:focus-visible {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 32px rgba(0, 0, 0, 0.55), 0 0 0 1px var(--hub-accent);
+    outline: none;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* Nome no rodapé da carta */
+.card span {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 36px 10px 14px;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    background: linear-gradient(0deg, rgba(10, 8, 24, 0.9) 0%, transparent 100%);
+}
+
+@media (max-width: 600px) {
+    .card { --offset: 0px !important; width: 140px; height: 330px; }
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
+    justify-content: center;
+    gap: 28px;
+}
+
+.welcome-card {
+    width: 100%;
+    max-width: 320px;
+    padding: 24px;
+    text-align: center;
+    background: rgba(234, 244, 251, 0.06);
+    border: 1px solid rgba(234, 244, 251, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+}
+
+.welcome-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--hub-accent);
+    box-shadow: 0 0 22px rgba(255, 140, 198, 0.35);
+    margin-bottom: 16px;
+}
+
+.welcome-card h2 { font-size: 1.4rem; margin-bottom: 6px; }
+.welcome-card .tag { color: var(--hub-accent); font-weight: 600; font-size: 0.85rem; }
+.welcome-card .sub { color: rgba(234, 244, 251, 0.6); font-size: 0.8rem; margin-top: 6px; }
+
+.enter-btn {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 10px 34px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #1c0a14;
+    background: var(--hub-accent);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.enter-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4); }

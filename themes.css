@@ -1,0 +1,95 @@
+
+body.theme-sunbringer {
+    --bg-top: #586e97;   --bg-bottom: #566d97;
+    --glow-top: rgba(48, 67, 121, 0.9);  --glow-left: rgba(105, 117, 150, 0.35);  --glow-right: rgba(4, 26, 68, 0.185);
+    --accent: #3665e6a6; --accent-text: #b2a7b4; --accent-border: #284886a6; --accent-link: #0d0e0f;
+    --warn: #3665e6a6;     --text-soft: #faf9f9;
+    --img-from: #02033a; --img-to: #081085;
+    --swatch: #212197e6;
+}
+
+body.theme-remielle {
+    --bg-top: #5a0a3a;   --bg-bottom: #24121e;
+    --glow-top: rgba(150, 20, 100, 0.8);  --glow-left: rgba(230, 70, 160, 0.3);  --glow-right: rgba(120, 10, 80, 0.3);
+    --accent: #e0509aa6; --accent-text: #1c0a14; --accent-border: #f3a6cfa6; --accent-link: #8cf2ff;
+    --warn: #ff4fa3;     --text-soft: #e4d6dfcc;
+    --img-from: #3a0a28; --img-to: #8a1c5e;
+    --swatch: #E0509A;
+}
+
+body.theme-swordmaster {
+    --bg-top: #14274a;   --bg-bottom: #0f141f;
+    --glow-top: rgba(40, 90, 190, 0.7);  --glow-left: rgba(120, 170, 255, 0.25);  --glow-right: rgba(60, 60, 160, 0.3);
+    --accent: #7fa8f0a6; --accent-text: #0b1322; --accent-border: #cfe0ffa6; --accent-link: #9dc0ff;
+    --warn: #7fa8f0;     --text-soft: #d3dbe8cc;
+    --img-from: #0c1a3a; --img-to: #3a5ca8;
+    --swatch: #9DC0FF;
+}
+
+body.theme-joyous {
+    --bg-top: #6b4a05;   --bg-bottom: #2a2112;
+    --glow-top: rgba(190, 140, 10, 0.75);  --glow-left: rgba(255, 200, 60, 0.3);  --glow-right: rgba(160, 90, 10, 0.3);
+    --accent: #f2b632a6; --accent-text: #241a05; --accent-border: #ffe08fa6; --accent-link: #ffd25c;
+    --warn: #f2b632;     --text-soft: #e6dfd0cc;
+    --img-from: #4a3200; --img-to: #b8860b;
+    --swatch: #F2B632;
+}
+
+body.theme-arche {
+    --bg-top: #07504c;   --bg-bottom: #101f20;
+    --glow-top: rgba(10, 130, 120, 0.7);  --glow-left: rgba(60, 220, 200, 0.25);  --glow-right: rgba(10, 90, 100, 0.3);
+    --accent: #2fc4b2a6; --accent-text: #04201d; --accent-border: #9ff0e4a6; --accent-link: #6fe8d8;
+    --warn: #2fc4b2;     --text-soft: #d0e0deCC;
+    --img-from: #042c2a; --img-to: #0f7a70;
+    --swatch: #58079b;
+}
+
+body.theme-beliora {
+    --bg-top: #35105e;   --bg-bottom: #1a1222;
+    --glow-top: rgba(90, 30, 170, 0.75);  --glow-left: rgba(170, 90, 255, 0.25);  --glow-right: rgba(60, 10, 120, 0.35);
+    --accent: #9b5cf0a6; --accent-text: #150a24; --accent-border: #d2b0ffa6; --accent-link: #c299ff;
+    --warn: #b06bff;     --text-soft: #ddd4e8cc;
+    --img-from: #1c0a38; --img-to: #5a2aa8;
+    --swatch: #9B5CF0;
+}
+
+body.theme-falkenhayn {
+    --bg-top: #4a1c1a;   --bg-bottom: #1e1715;
+    --glow-top: rgba(110, 42, 30, 0.7);  --glow-left: rgba(190, 118, 70, 0.22);  --glow-right: rgba(80, 42, 20, 0.35);
+    --accent: #8fb348a6; --accent-text: #11190a; --accent-border: #cfe39aa6; --accent-link: #b5d46a;
+    --warn: #8fb348;     --text-soft: #dbe0d0cc;
+    --img-from: #1c2a0e; --img-to: #55742a;
+    --swatch: #f7420c;
+}
+body.theme-miyabi {
+    --bg-top: #1b6572;   --bg-bottom: #1b6572;
+    --glow-top: rgba(30, 94, 110, 0.7);  --glow-left: rgba(70, 162, 190, 0.22);  --glow-right: rgba(20, 36, 80, 0.35);
+    --accent: #4888b3a6; --accent-text: #11190a; --accent-border: #9a9be3a6; --accent-link: #b5d46a;
+    --text-soft: #dbe0d0cc;
+    --img-from: #1c2a0e; --img-to: #2a5d74;
+    --swatch: #0c6af7;
+}
+body.theme-ye {
+    --bg-top: #8b2531;   --bg-bottom: #310c11;
+    --glow-top: rgba(112, 36, 23, 0.7);  --glow-left: rgba(145, 48, 48, 0.22);  --glow-right: rgba(80, 42, 20, 0.35);
+    --accent: #e4640fa6; --accent-text: #190a0b; --accent-border: #e39a9ea6; --accent-link: #dd3a1d;
+    --text-soft: #dbe0d0cc;
+    --img-from: #1c2a0e; --img-to: #742a30;
+    --swatch: #d32029;
+}
+body.theme-old-eridu {
+    --bg-image: url('img/eridu_back.png'); --bg-opacity: 0.3;
+    --bg-top: #3d140c;   --bg-bottom: #1c1512;
+    --glow-top: rgba(160, 30, 4, 0.7);  --glow-left: rgba(94, 67, 46, 0.22);  --glow-right: rgba(75, 45, 39, 0.35);
+    --accent: #d63e3ea6; --accent-text: #1d0d08; --accent-border: #f0b9a0a6; --accent-link: #ff9a78;
+    --warn: #c9694a;     --text-soft: #e3d8d2cc;
+}
+ 
+body.theme-new-eridu {
+    --bg-image: url('img/eridu_back.png'); --bg-opacity: 0.35;
+    --bg-top: #0f1f45;   --bg-bottom: #0e0f1c;
+    --glow-top: rgba(40, 80, 190, 0.7);  --glow-left: rgba(220, 70, 70, 0.22);  --glow-right: rgba(30, 60, 150, 0.3);
+    --accent: #4f8cf0a6; --accent-text: #08142b; --accent-border: #b4d0ffa6; --accent-link: #8fb8ff;
+    --warn: #e05a5a;     --text-soft: #d3dbe8cc;
+    --img-from: #0a1633; --img-to: #2d4f9e;
+}
